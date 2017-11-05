@@ -1,0 +1,14 @@
+.idea/
+analysis/Screenshots/
+Screenshots/
+collectData/__init__.pyc
+collectData/collectData.pyc
+collectData/dbutils.pyc
+collectData/winutils.pyc
+Java/release
+Java/source/.metadata/
+config- bk.json
+config - gc.json
+out.txt
+README.txt
+sql_err.txt

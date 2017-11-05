@@ -1,0 +1,65 @@
+{
+  "db_config": {
+    "database": "xbct", 
+    "host": "127.0.0.1", 
+    "password": "db_passw0rd", 
+    "port": "3306", 
+    "user": "xbct"
+  }, 
+  "host_machine": "127.0.0.1", 
+  "image_folder": "C:/XBCT/Screenshots", 
+  "proxy_port": 8080, 
+  "viewport": {
+    "ff": [
+      9,
+      101,
+      24,
+      8
+    ],
+   "gc": [
+      9,
+      74,
+      24,
+      8
+    ],
+    "ie": [
+      9,
+      63,
+      24,
+      8
+    ]
+  },
+  "vm_config": {
+    "browser_map": {
+      "ff": [
+        "Mozilla Firefox",
+        "D:/Program Files/Mozilla Firefox/firefox.exe"
+      ],
+      "gc": [
+        "Google Chrome", 
+        "C:/Users/huisk/AppData/Local/Google/Chrome/Application/chrome.exe"
+      ],
+      "ie": [
+        "Internet Explorer",
+        "C:/Program Files/Internet Explorer/iexplore.exe"
+      ]
+    }, 
+    "machine": "127.0.0.1", 
+    "reference": "gc"
+  }, 
+  "web_port": 8000, 
+  "window_size": {
+    "ff": [
+      1296,
+      776
+    ],
+    "gc": [
+      1296, 
+      776
+    ],
+    "ie": [
+      1296,
+      776
+    ]
+  }
+}
