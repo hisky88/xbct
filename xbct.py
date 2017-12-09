@@ -1,12 +1,12 @@
 import os, sys
 from collectData import collectData
 logo = '''
-________________________________
+__________________________________
           __   __  __ __
       \/ |__) /      |
       /\ |__) \__    |
-Cross Brosser Compability Test
-________________________________ 
+Cross Brosser Compability Test tool
+__________________________________
 '''
 
 if __name__ == "__main__":
