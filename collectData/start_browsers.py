@@ -1,7 +1,7 @@
 import subprocess, json
 
 config = None
-config_file = "C:/WebDiff/config.json"
+config_file = "C:/XBCT/config.json"
 
 if __name__ == "__main__":
   cFile = open(config_file, "r")

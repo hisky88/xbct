@@ -5,7 +5,7 @@ import json, winutils, subprocess, time
 from random import randint
 
 config = None
-config_file = "C:/WebDiff/config.json"
+config_file = "C:/XBCT/config.json"
 
 if __name__ == "__main__":
   #Read configuration
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     #winutils.resizeWindow(wr[2]-wr[0],wr[3]-wr[1])
     #time.sleep(5)
     config["window_size"][b] = [wr[2]-wr[0],wr[3]-wr[1]]
-    clrScrpt = "http://localhost/webdiff/color.php"
+    clrScrpt = "http://localhost/xbct/color.php"
     winutils.enterURL(clrScrpt)
     time.sleep(2)
     c = (50,50,50)
