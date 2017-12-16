@@ -118,7 +118,7 @@ public class ClusterIssues {
 			 int y1=Integer.parseInt(posStr.substring(0,posStr.indexOf(')')));
 			 posStr=posStr.substring(posStr.indexOf(',')+1);
 			 //listAll.add(new Node(rs.getInt(1), "", rs.getString(5), "", "", "", 0, x0, y0, x1, y1, 0, 0, 0, 0));
-			 listAll.add(new Node(rs.getInt(1), null, rs.getString(5), null, null, rs.getInt(2), 0, rs.getString(7), rs.getString(8),x0, y0, x1, y1, 0, false, false, null));
+			 listAll.add(new Node(rs.getInt(1), null, rs.getString(5), null, null, rs.getInt(2), 0, x0, y0, x1, y1, 0, false, false, null));
 		 }
 		 
 		 //Sorts nodes in descending order

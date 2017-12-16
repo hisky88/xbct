@@ -3,12 +3,11 @@ import java.util.ArrayList;
 
 public class Node {
 	private String domid,xpath,contenthash,name;
-	private String attribute_name, attribute_value;
 	private int id,type,x0,y0,x1,y1,zindex,testid;
 	boolean clickable,visible,mapped,nondet;
 	private Node parent;
 	private ArrayList <Node> children=new ArrayList<Node>();
-	public Node(int testid,String domid,String xpath,String contenthash,String name,int id,int type, String attribute_name, String attribute_value,int x0,int y0,int x1,int y1, int zindex, boolean clickable,boolean visible,Node parent){
+	public Node(int testid,String domid,String xpath,String contenthash,String name,int id,int type,int x0,int y0,int x1,int y1, int zindex, boolean clickable,boolean visible,Node parent){
 		this.testid=testid;
 		this.domid=domid;
 		this.xpath=xpath;
@@ -16,8 +15,6 @@ public class Node {
 		this.name=name;
 		this.id=id;
 		this.type=type;
-		this.attribute_name=attribute_name;
-		this.attribute_value=attribute_value;
 		this.x0=x0;
 		this.x1=x1;
 		this.y1=y1;
@@ -60,12 +57,6 @@ public class Node {
 	}
 	public String getName() {
 		return name;
-	}
-	public String getAttributeName() {
-		return attribute_name;
-	}
-	public String getAttributeValue() {
-		return attribute_value;
 	}
 	public void setName(String name) {
 		this.name = name;
@@ -155,7 +146,7 @@ public class Node {
 		return testid;
 	}
 	public boolean equals(Node n){
-		if(this.domid.equals(n.getDomid()) && this.name==n.getName() && this.type==n.getType() && this.attribute_name==n.getAttributeName() && this.attribute_value==n.getAttributeValue() && this.x0==n.getX0() && this.y0==n.getY0() && this.x1==n.getX1() && this.y1==n.getY1() && this.contenthash.equals(n.getContenthash()) && this.zindex==n.getZindex() && this.clickable==n.isClickable() && this.visible==n.isVisible()){
+		if(this.domid.equals(n.getDomid()) && this.name==n.getName() && this.type==n.getType() && this.x0==n.getX0() && this.y0==n.getY0() && this.x1==n.getX1() && this.y1==n.getY1() && this.contenthash.equals(n.getContenthash()) && this.zindex==n.getZindex() && this.clickable==n.isClickable() && this.visible==n.isVisible()){
 			return true;
 		}
 			
