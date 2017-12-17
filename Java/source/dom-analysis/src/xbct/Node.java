@@ -27,14 +27,6 @@ public class Node {
 		this.nondet=false;
 	}
 	public String toString() {
-			/*return "Node [" +"clickable=" + clickable
-					+ ", contenthash=" + contenthash + ", domid=" + domid + ", id="
-					+ id + ", name=" + name  + ", type="
-					+ type + ", visible=" + visible + ", x0=" + x0 + ", x1=" + x1
-					+ ", xpath=" + xpath + ", y0=" + y0 + ", y1=" + y1
-					+ ", zindex=" + zindex + "]\n";*/
-//		return "";
-//		return id+" "+xpath+"\n";
 		return id+""; 
 		}
 	public String getDomid() {

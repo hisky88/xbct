@@ -31,10 +31,18 @@
   },
   "vm_config": {
     "browser_map": {
+      "ff": [
+        "Mozilla Firefox",
+        "D:/Program Files/Mozilla Firefox/firefox.exe"
+      ],
       "gc": [
-        "Google Chrome", 
+        "Google Chrome",
         "C:/Users/huisk/AppData/Local/Google/Chrome/Application/chrome.exe"
-      ]
+      ],
+      "ie": [
+        "Internet Explorer",
+        "C:/Program Files/Internet Explorer/iexplore.exe"
+       ]
     }, 
     "machine": "127.0.0.1", 
     "reference": "gc"

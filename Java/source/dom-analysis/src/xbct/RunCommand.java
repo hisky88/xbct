@@ -11,8 +11,6 @@ public class RunCommand {
 		Runtime run = Runtime.getRuntime();
 		try {
 			Process pp = run.exec(WDConstants.EXEC_DIR + x);
-			// System.out.println("D:/workspace/webdiff/"+x);
-			// System.out.println(pp.waitFor());
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					pp.getInputStream()));
 			String line = in.readLine();

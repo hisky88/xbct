@@ -12,7 +12,6 @@ import java.util.Set;
 public class TraverseDOMTrees{
 	private HashMap[] map;
 	private DbUtils db;
-	//The hashset is not mentioned in the algo but is used to  create Node of each of the table entries
 	private Node[][] set;
 	private boolean variable_check;
 	public TraverseDOMTrees(int[] browserTestId,int refBrowserTestId, boolean variable_check) throws SQLException{
@@ -35,18 +34,9 @@ public class TraverseDOMTrees{
 		 }else{
 			 filter = "IE";
 		 }	
-//		 ResultSet incompability_element=this.db.getQuery("SELECT * FROM incompability_element where browser="+"'filter'");
-//		 ResultSet incompability_element=this.db.getQuery("SELECT * FROM incompability_element");
-//		 incompability_element.first();
-//		 if(incompability_element.getString(1)=="IE")
-//			 currentBrowser="ie";
-//		 if(incompability_element.getString(1)=="IE")
-//			 currentBrowser="ie";
-//	     if(incompability_element.getString(1)=="IE")
 		 ResultSet rs1=this.db.getQuery("SELECT MAX(id) FROM domdata where testid="+testid);
 		 rs1.first();
 		 int row=rs1.getInt(1);//rs.getRow();
-//		 System.out.println("MaxID"+row);
 		 ResultSet rs=this.db.getQuery("SELECT * FROM domdata where testid="+testid);
 		 rs.first();
 		 int rowCount = 0;
@@ -54,7 +44,6 @@ public class TraverseDOMTrees{
 	        rs.last();
 	           rowCount = rs.getRow();
 	      } catch (Exception e) {
-	            // TODO: handle exception
 	        e.printStackTrace();
          }
 	     rs.first();
@@ -77,7 +66,6 @@ public class TraverseDOMTrees{
 				}
 				 childlist[rs.getInt(4)]=rs.getString(14);
 				 System.out.println("Dom"+"("+idcount+")"+": " + childlist[rs.getInt(4)]);
-//				 incompability_element.first();
 
 				 idcount = idcount + 1;
 				}while(rs.next());

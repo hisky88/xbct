@@ -145,7 +145,7 @@ public class CrossBrowserTest {
 					int nodeH=nodeY1-nodeY0;
 					if(nodeW>0 && nodeH>0){
 					//Grey out the browser stuff
-					String tmp = "grey_out.exe "+WDConstants.SC_DIR+browserTestId[i-1]+".png "+nodeX0+" "+nodeY0+" "+nodeX1+" "+nodeY1;
+				    String tmp = "grey_out.exe "+WDConstants.SC_DIR+browserTestId[i-1]+".png "+nodeX0+" "+nodeY0+" "+nodeX1+" "+nodeY1;
 					sysCall(tmp);
 					}
 					//Ignore current node

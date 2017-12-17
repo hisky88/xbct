@@ -81,9 +81,6 @@ public class ClusterIssues {
 		if(prefix.charAt(pl-1) == '['){
 			prefix.deleteCharAt(pl-1);
 		}
-//		if(b.length()!=prefix.length() || a.length()!=b.length()){
-//			prefix.append("*");
-//		}
 		return prefix.toString();
 	}
 	private boolean containment(Node A,Node B){
@@ -117,7 +114,6 @@ public class ClusterIssues {
 			 
 			 int y1=Integer.parseInt(posStr.substring(0,posStr.indexOf(')')));
 			 posStr=posStr.substring(posStr.indexOf(',')+1);
-			 //listAll.add(new Node(rs.getInt(1), "", rs.getString(5), "", "", "", 0, x0, y0, x1, y1, 0, 0, 0, 0));
 			 listAll.add(new Node(rs.getInt(1), null, rs.getString(5), null, null, rs.getInt(2), 0, x0, y0, x1, y1, 0, false, false, null));
 		 }
 		 
