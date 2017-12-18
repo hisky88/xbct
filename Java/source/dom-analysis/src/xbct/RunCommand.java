@@ -14,7 +14,6 @@ public class RunCommand {
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					pp.getInputStream()));
 			String line = in.readLine();
-			System.out.println("Line: "+line);
 			while ((line) != null) {
 				return line;
 			}

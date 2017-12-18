@@ -155,6 +155,7 @@ public class CrossBrowserTest {
 				double relDist1=relDistToContainer(node);
 				double relDist2=relDistToContainer(nodej);
 				double diff=Math.abs(relDist1-relDist2);
+				System.out.println(node.getName() + " " + node.getId() + " " + "diff: " + diff);
 				if(diff>5){
 					Node parent1=node.getParent();
 					Node parent2=nodej.getParent();

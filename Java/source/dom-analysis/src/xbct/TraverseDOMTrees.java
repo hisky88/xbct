@@ -78,9 +78,9 @@ public class TraverseDOMTrees{
 							
 							try{
 								nodelist[i].addChild(nodelist[Integer.parseInt(tNo)]);
-								System.out.println("Integer.parseInt(tNo): " + Integer.parseInt(tNo));
-								System.out.println("nodelist[Integer.parseInt(tNo)]: " + nodelist[Integer.parseInt(tNo)]);
-								System.out.println("nodelist[i]: " + nodelist[i]);
+//								System.out.println("Integer.parseInt(tNo): " + Integer.parseInt(tNo));
+//								System.out.println("nodelist[Integer.parseInt(tNo)]: " + nodelist[Integer.parseInt(tNo)]);
+//								System.out.println("nodelist[i]: " + nodelist[i]);
 							}
 							catch (Exception e) {
 							}
@@ -250,12 +250,4 @@ public class TraverseDOMTrees{
 		}
 	}
 	
-//	public static void main(String[] args) throws SQLException{
-//		//Browser Test ids
-//		int[] browserTestId={1,3};
-//		//Ref browser
-//		int refBrowserTestId=2;
-//		new MatchDOMTrees(browserTestId,refBrowserTestId);
-//		
-//	}
 }

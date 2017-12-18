@@ -64,7 +64,7 @@ public class ClusterIssues {
 			nodeid=nodeid.substring(0,nodeid.length()-1);
 			//System.out.println(nodeid + "("+x0+","+y0+","+x1+","+y1+")" + xPathPrefix);
 			String coords = "("+x0+","+y0+","+x1+","+y1+")";
-			this.db.insQuery("INSERT INTO report (testid,nodeid,coords,xpath) VALUES("+testid+",'"+nodeid+"','"+coords+"','"+xPathPrefix+"')");
+			//this.db.insQuery("INSERT INTO report (testid,nodeid,coords,xpath) VALUES("+testid+",'"+nodeid+"','"+coords+"','"+xPathPrefix+"')");
 		}
 	}
 	private String getCommonPrefix(String a, String b) {
