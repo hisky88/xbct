@@ -1,5 +1,15 @@
 .idea/
 analysis/Screenshots/
+analysis/opencv_code/colorspp/colorspp/Debug/
+analysis/opencv_code/colorspp/Debug/
+analysis/opencv_code/get_emd/Debug/
+analysis/opencv_code/get_emd/get_emd/Debug/
+analysis/opencv_code/get_emd/get_emd/Release/
+analysis/opencv_code/get_emd/Release/
+analysis/opencv_code/grey_out/Debug/
+analysis/opencv_code/grey_out/grey_out/Debug/
+analysis/opencv_code/grey_out/grey_out/Release/
+analysis/opencv_code/grey_out/Release/
 Screenshots/
 collectData/__init__.pyc
 collectData/collectData.pyc
