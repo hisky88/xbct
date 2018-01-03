@@ -10,6 +10,12 @@ analysis/opencv_code/grey_out/Debug/
 analysis/opencv_code/grey_out/grey_out/Debug/
 analysis/opencv_code/grey_out/grey_out/Release/
 analysis/opencv_code/grey_out/Release/
+analysis/Image Comparison/.metadata/
+analysis/Image Comparison/CI1/.settings/
+analysis/Image Comparison/CI1/bin/
+analysis/Image Comparison/CI1/build/
+analysis/Image Comparison/CI1/.classpath
+analysis/Image Comparison/CI1/.project
 Screenshots/
 collectData/__init__.pyc
 collectData/collectData.pyc
