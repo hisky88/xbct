@@ -1,7 +1,12 @@
 .idea/
 analysis/Screenshots/
 analysis/opencv_code/colorspp/colorspp/Debug/
+analysis/opencv_code/colorspp/colorspp/Release/
+analysis/opencv_code/colorspp/colorspp/x64/Debug/
+analysis/opencv_code/colorspp/colorspp/x64/Release/
+analysis/opencv_code/colorspp/x64/Debug/
 analysis/opencv_code/colorspp/Debug/
+analysis/opencv_code/colorspp/.vs/
 analysis/opencv_code/get_emd/Debug/
 analysis/opencv_code/get_emd/get_emd/Debug/
 analysis/opencv_code/get_emd/get_emd/Release/
@@ -10,6 +15,7 @@ analysis/opencv_code/grey_out/Debug/
 analysis/opencv_code/grey_out/grey_out/Debug/
 analysis/opencv_code/grey_out/grey_out/Release/
 analysis/opencv_code/grey_out/Release/
+analysis/opencv_code/grey_out/.vs/
 analysis/Image Comparison/.metadata/
 analysis/Image Comparison/CI1/.settings/
 analysis/Image Comparison/CI1/bin/
