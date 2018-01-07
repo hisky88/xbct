@@ -52,7 +52,6 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>D:\Program Files %28x86%29\OpenCV\cxcore\include;D:\Program Files %28x86%29\OpenCV\cv\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Program Files %28x86%29\OpenCV\otherlibs;D:\Program Files %28x86%29\OpenCV\lib;$(LibraryPath)</LibraryPath>
-    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsS DK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
