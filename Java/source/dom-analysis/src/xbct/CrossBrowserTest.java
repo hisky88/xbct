@@ -59,7 +59,7 @@ public class CrossBrowserTest {
 	}
 	public String sysCall(String s){
 		RunCommand r=new RunCommand();
-//		System.out.println(r.runCmd(s).length());
+		System.out.println(r.runCmd(s).length());
 		return r.runCmd(s);
 	}
 

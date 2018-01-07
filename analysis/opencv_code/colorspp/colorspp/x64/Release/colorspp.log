@@ -1,0 +1,8 @@
+﻿colorspp.obj : error LNK2001: 无法解析的外部符号 cvCreateImage
+colorspp.obj : error LNK2001: 无法解析的外部符号 cvSetImageROI
+colorspp.obj : error LNK2001: 无法解析的外部符号 cvResetImageROI
+colorspp.obj : error LNK2001: 无法解析的外部符号 cvLoadImage
+colorspp.obj : error LNK2001: 无法解析的外部符号 cvGetSize
+colorspp.obj : error LNK2001: 无法解析的外部符号 cvCopy
+colorspp.obj : error LNK2001: 无法解析的外部符号 cvGet2D
+C:\XBCT\analysis\opencv_code\colorspp\x64\Release\colorspp.exe : fatal error LNK1120: 7 个无法解析的外部命令

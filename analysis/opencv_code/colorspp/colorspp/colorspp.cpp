@@ -66,7 +66,7 @@ int main( int argc, char** argv ) {
 	//for img1 roi X,Y,W,H
 	//getROI(argv[1],atoi(argv[3]),atoi(argv[4]),atoi(argv[5]),atoi(argv[6]))
 	//path,x,y,w,h
-	getColors(getROI(argv[1],atoi(argv[2]),atoi(argv[3]),atoi(argv[4]),atoi(argv[5])));
+	getColors(getROI(argv[1],atoi(argv[2]),atoi(argv[3]),atoi(argv[4]),atoi(argv[5])));  
 	//getchar();
 	//printf("CORREL (1): %f \n",cvCompareHist(h1,h2,CV_COMP_CORREL));
 	//printf("CHISQR (0): %f \n",cvCompareHist(h1,h2,CV_COMP_CHISQR));
