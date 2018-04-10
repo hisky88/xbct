@@ -10,7 +10,7 @@ public class RunCommand {
 		// System.out.println(x);
 		Runtime run = Runtime.getRuntime();
 		try {
-			Process pp = run.exec(WDConstants.EXEC_DIR + x);
+			Process pp = run.exec("python " + x);
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					pp.getInputStream()));
 			String line = in.readLine();

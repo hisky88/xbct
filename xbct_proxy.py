@@ -5,7 +5,7 @@ import urlparse, json, os, sys
  
 class SimpleProxyRequest(ProxyRequest):
     def process(self):
-        if "/webdiff/" in self.uri:
+        if "/xbct/" in self.uri:
             data_server = "localhost" #"cheetah.cc.gt.atl.ga.us"
             self.received_headers['host'] = data_server
             parsed = urlparse.urlparse(self.uri)

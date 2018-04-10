@@ -23,6 +23,14 @@ analysis/Image Comparison/CI1/bin/
 analysis/Image Comparison/CI1/build/
 analysis/Image Comparison/CI1/.classpath
 analysis/Image Comparison/CI1/.project
+Java/source/dom-analysis/src/xbct/ImageSimilarityComparison.java
+analysis/ImageComparisonSystem/
+analysis/colorspp.exe
+analysis/ImageSimilarityComparison-master/
+hudsuckr.exe
+analysis/opencv_code/get_emd/.vs/
+analysis/Method2/
+analysis/imageCompare.py
 Screenshots/
 collectData/__init__.pyc
 collectData/collectData.pyc

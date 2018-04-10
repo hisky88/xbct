@@ -11,38 +11,38 @@
   "proxy_port": 8080, 
   "viewport": {
     "ff": [
-      9,
-      101,
-      24,
-      8
-    ],
-   "gc": [
-      9,
-      74,
-      24,
-      8
-    ],
+      8, 
+      123, 
+      6, 
+      0
+    ], 
+    "gc": [
+      0,
+      81,
+      6, 
+      0
+    ], 
     "ie": [
-      9,
-      63,
-      24,
-      8
+      0,
+      96,
+      6, 
+      0
     ]
-  },
+  }, 
   "vm_config": {
     "browser_map": {
       "ff": [
-        "Mozilla Firefox",
+        "Mozilla Firefox", 
         "D:/Program Files/Mozilla Firefox/firefox.exe"
-      ],
+      ], 
       "gc": [
-        "Google Chrome",
+        "Google Chrome", 
         "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
-      ],
+      ], 
       "ie": [
-        "Internet Explorer",
+        "Internet Explorer", 
         "C:/Program Files/internet explorer/iexplore.exe"
-       ]
+      ]
     }, 
     "machine": "127.0.0.1", 
     "reference": "gc"
@@ -50,16 +50,16 @@
   "web_port": 8000, 
   "window_size": {
     "ff": [
-      1296,
-      776
-    ],
+      1920,
+      1030
+    ], 
     "gc": [
-      1296, 
-      776
-    ],
+      1920,
+      1030
+    ], 
     "ie": [
-      1296,
-      776
+      1920,
+      1030
     ]
   }
 }

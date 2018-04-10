@@ -1,4 +1,6 @@
 package xbct;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -75,24 +77,36 @@ public class CrossBrowserTest {
 			alpha=alphaCache.get(boxiStr);
 		}
 		else{
-			String tmp="colorspp.exe "+WDConstants.SC_DIR+refBrowserTestId+".png "+boxi[0]+" "+boxi[1]+" "+boxi[2]+" "+boxi[3];
-			alpha=Double.parseDouble(sysCall(tmp));
-			alphaCache.put(boxiStr,alpha);
+//			String tmp="colorspp.exe "+WDConstants.SC_DIR+refBrowserTestId+".png "+boxi[0]+" "+boxi[1]+" "+boxi[2]+" "+boxi[3];
+//			alpha=Double.parseDouble(sysCall(tmp));
+//			alphaCache.put(boxiStr,alpha);
+		}
+        String args1= " C:/XBCT/analysis/imageCompare.py " + WDConstants.SC_DIR+refBrowserTestId+".png "+WDConstants.SC_DIR+browserTestId+".png "+boxi[0]+" "+boxi[1]+" "+boxi[2]+" "+boxi[3]+" "+boxj[0]+" "+boxj[1]+" "+boxj[2]+" "+boxj[3];
+        Runtime run = Runtime.getRuntime();
+        try {
+			Process pp = run.exec("python " + args1);
+			BufferedReader in = new BufferedReader(new InputStreamReader(
+					pp.getInputStream()));
+			String line = in.readLine();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 		//Choose threshold based on color density and size
-		double threshold=chooseThreshold(alpha,boxi[2],boxi[3])*m;
-		//Earth movers distance
-		String tmp = "get_emd.exe "+WDConstants.SC_DIR+refBrowserTestId+".png "+WDConstants.SC_DIR+browserTestId+".png "+boxi[0]+" "+boxi[1]+" "+boxi[2]+" "+boxi[3]+" "+boxj[0]+" "+boxj[1]+" "+boxj[2]+" "+boxj[3];
-		System.out.println(sysCall(tmp));
-		double emd=Double.parseDouble(sysCall(tmp));
-		emd=Math.floor(emd);
-		if(emd<=threshold)
-			return true;
-		else
-		{
-			//System.out.println(emd+" AREA"+(boxi[2]*boxi[3])+"CD"+alpha+"Threshold"+threshold);
-			return false;
-		}
+//		double threshold=chooseThreshold(alpha,boxi[2],boxi[3])*m;
+//		//Earth movers distance
+//		String tmp = "get_emd.exe "+WDConstants.SC_DIR+refBrowserTestId+".png "+WDConstants.SC_DIR+browserTestId+".png "+boxi[0]+" "+boxi[1]+" "+boxi[2]+" "+boxi[3]+" "+boxj[0]+" "+boxj[1]+" "+boxj[2]+" "+boxj[3];
+//		System.out.println(sysCall(tmp));
+//		double emd=Double.parseDouble(sysCall(tmp));
+//		emd=Math.floor(emd);
+//		if(emd<=threshold)
+//			return true;
+//		else
+//		{
+//			//System.out.println(emd+" AREA"+(boxi[2]*boxi[3])+"CD"+alpha+"Threshold"+threshold);
+//			return false;
+//		}
+        return true;
 	}
 	
 	private double chooseThreshold(double alpha, int w, int h) {

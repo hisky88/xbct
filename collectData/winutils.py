@@ -2,10 +2,11 @@ import sys
 reload(sys)
 sys.setdefaultencoding('gb18030')
 import win32api, win32gui, win32process, win32con, win32clipboard
-import Image, ImageGrab, ImageChops, MySQLdb
+import ImageGrab, ImageChops, MySQLdb
 import time, os
 from random import choice
 from ctypes import windll
+from PIL import Image
 
 def captureScreen():
   '''
@@ -189,11 +190,11 @@ def findViewportCoords(color):
   return dims
 
 def setProxy(config):
-  command = "C:/WebDiff/hudsuckr.exe (null) true true true true \""+config["host_machine"]+":8080\" \"<local>\" (null)"
+  command = "C:/Webdiff/hudsuckr.exe (null) true true true true \""+config["host_machine"]+":8080\" \"<local>\" (null)"
   os.system(command + ">>out.txt")
 
 def resetProxy():
-  command = "C:/WebDiff/hudsuckr.exe (null) true false false false (null) (null) (null)"
+  command = "C:/Webdiff/hudsuckr.exe (null) true false false false (null) (null) (null)"
   os.system(command + ">>out.txt")
 
 def enterURL(data):
