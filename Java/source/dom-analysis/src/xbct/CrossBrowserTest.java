@@ -1,6 +1,9 @@
 package xbct;
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.LineNumberReader;
 import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -69,44 +72,29 @@ public class CrossBrowserTest {
 		if(nodej.getName().equalsIgnoreCase("input") || nodej.getName().equalsIgnoreCase("button")){
 			return true; //We do this to avoid reporting differences in native browser form element styles
 		}
-		//Calculates alpha
-		//boxi and boxj have x0,y0,w,h
-		double alpha=-1;
-		String boxiStr=boxi[0]+","+boxi[1]+","+boxi[2]+","+boxi[3];
-		if(alphaCache.containsKey(boxiStr)){
-			alpha=alphaCache.get(boxiStr);
-		}
-		else{
-//			String tmp="colorspp.exe "+WDConstants.SC_DIR+refBrowserTestId+".png "+boxi[0]+" "+boxi[1]+" "+boxi[2]+" "+boxi[3];
-//			alpha=Double.parseDouble(sysCall(tmp));
-//			alphaCache.put(boxiStr,alpha);
-		}
+		int diff = 0;
         String args1= " C:/XBCT/analysis/imageCompare.py " + WDConstants.SC_DIR+refBrowserTestId+".png "+WDConstants.SC_DIR+browserTestId+".png "+boxi[0]+" "+boxi[1]+" "+boxi[2]+" "+boxi[3]+" "+boxj[0]+" "+boxj[1]+" "+boxj[2]+" "+boxj[3];
         Runtime run = Runtime.getRuntime();
         try {
 			Process pp = run.exec("python " + args1);
-			BufferedReader in = new BufferedReader(new InputStreamReader(
-					pp.getInputStream()));
-			String line = in.readLine();
+			InputStreamReader processInStream = new InputStreamReader(pp.getInputStream()); 
+			LineNumberReader result = new LineNumberReader(processInStream);
+			String line;
+            while ((line = result.readLine()) != null) {  
+                diff = Math.abs(Integer.parseInt(line));
+                System.out.println("diff: " + diff);
+            }  
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
 		}
-		//Choose threshold based on color density and size
-//		double threshold=chooseThreshold(alpha,boxi[2],boxi[3])*m;
-//		//Earth movers distance
-//		String tmp = "get_emd.exe "+WDConstants.SC_DIR+refBrowserTestId+".png "+WDConstants.SC_DIR+browserTestId+".png "+boxi[0]+" "+boxi[1]+" "+boxi[2]+" "+boxi[3]+" "+boxj[0]+" "+boxj[1]+" "+boxj[2]+" "+boxj[3];
-//		System.out.println(sysCall(tmp));
-//		double emd=Double.parseDouble(sysCall(tmp));
-//		emd=Math.floor(emd);
-//		if(emd<=threshold)
-//			return true;
-//		else
-//		{
-//			//System.out.println(emd+" AREA"+(boxi[2]*boxi[3])+"CD"+alpha+"Threshold"+threshold);
-//			return false;
-//		}
-        return true;
+        int threshold = 30;
+		if(diff <= threshold)
+			return true;
+		else
+		{
+			return false;
+		}
 	}
 	
 	private double chooseThreshold(double alpha, int w, int h) {
